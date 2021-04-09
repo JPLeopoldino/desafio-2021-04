@@ -1,4 +1,4 @@
-# Desafio Alfred: Novembro/2020 
+# Desafio Alfred: Abril/2021 
 
 Neste desafio você terá que implementar um sistema mobile com React Native onde será possível buscar por filmes e series utilizando a API (http://www.omdbapi.com/). A sua solução deve:
 
@@ -21,6 +21,19 @@ Chave de API: 925eba28
 Exemplo requisição: GET http://www.omdbapi.com/?apikey=925eba28&s=batman
 
 Você pode criar uma aplicação nativa, ou com expo (sdk39+).
+
+## Diferenciais
+Os projetos em desenvolvimento na Alfred utilizam ou podem utilizar as seguintes tecnologias/conceitos:
+
+- Typescript
+- Styled Components
+- Componentização das interfaces
+- Paginação ou scroll infinito
+- Uso de contexto para gerenciamento centralizado de estados
+- Splash Screen
+- Fazer deploy do app no Heroku
+
+O uso destas tecnologias/conceitos não são fundamentais na solução, mas será muito apreciado o uso do que conseguir incluir. 
 
 ## Entrega da sua solução
 Altere o arquivo README.md descrevendo o que o aplicativo faz e que tipo de premissas foram adotadas para desenvolver as funcionalidades. Adicione pelo menos uma imagem do aplicativo, pode ser uma imagem estática ou um gif do aplicativo sendo utilizado. Para entregar o projeto, faça um fork neste repositório e envie o link do seu repositório para o responsável quando o projeto estiver finalizado.

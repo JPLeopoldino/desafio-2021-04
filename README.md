@@ -35,7 +35,7 @@ Os projetos em desenvolvimento na Alfred utilizam ou podem utilizar as seguintes
 
 O uso destas tecnologias/conceitos não são fundamentais na solução, mas será muito apreciado o uso do que conseguir incluir. 
 
-## Entrega da sua solução
+## Entrega da sua solução - 16-04-21
 Altere o arquivo README.md descrevendo o que o aplicativo faz e que tipo de premissas foram adotadas para desenvolver as funcionalidades. Adicione pelo menos uma imagem do aplicativo, pode ser uma imagem estática ou um gif do aplicativo sendo utilizado. Para entregar o projeto, faça um fork neste repositório e envie o link do seu repositório para o responsável quando o projeto estiver finalizado.
 
 Ficamos no aguardo da entrega da sua solução e desejamos boa sorte ;)

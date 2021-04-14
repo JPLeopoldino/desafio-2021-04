@@ -40,21 +40,14 @@ const MovieItem = ({poster, title, year, id, isFavorite, onPress})=>{
                     <Text style={style.description}>Ano: {year}</Text>
                 </View>
                 <TouchableOpacity
-                    onPress={()=>console.log(isFavorite)}
-                >
-                    <Icon
-                        name='circle'
-                        type='material-community'
-                    />
-                </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={()=> onPress(title)}
+                    onPress={()=> onPress(id)}
                 >
                     <Icon
                         name={isFavorite ? 'star' : 'star-outline'}
                         type='material-community'
                         color='#AAA'
                         style={styles.icon}
+                        containerStyle={{backgroundColor: '#FFF', padding: 10, borderRadius: 30, elevation: 5}}
                     />
                 </TouchableOpacity>
 
@@ -67,13 +60,14 @@ const MovieItem = ({poster, title, year, id, isFavorite, onPress})=>{
 const styles = StyleSheet.create({
     container:{
         flexDirection: 'column',
+        alignItems: 'center',
         flexGrow: 1,
         paddingVertical: 20,
         paddingHorizontal: 50,
         position: 'relative',
     },
     image: {
-        width: '100%',
+        width: '90%',
         height: 500,
         borderRadius: 13,
         backgroundColor: '#AAA'

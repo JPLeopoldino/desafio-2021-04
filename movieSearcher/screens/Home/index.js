@@ -163,17 +163,16 @@ const Home = ()=>{
       title={item.Title}
       year={item.Year}
       id={item.imdbID}
-      isFavorite={favorites.includes(item)}
+      isFavorite={favorites.includes(item.imdbID)}
       onPress={item => {
         setFavorite((favoriteItems) => {
           let isFavorite = favoriteItems.includes(item);
           if (isFavorite) {
-            console.log(`\n-----\nRemoveu no Array: ${item}\nisFavorite: ${isFavorite}`);
-            console.log(favoriteItems);
-            return favoriteItems.filter((title) => title !== item)
+            console.log(`\n-----\nRemoveu no Array: ${item}\n Array: ${favoriteItems}`);
+            return favoriteItems.filter((title) => title !== item);
             
           }
-          console.log(`\n-----\nAdicionado no Array: ${item}\nArray: ${favoriteItems}\nisFavorite: ${isFavorite}`)
+          console.log(`\n-----\nAdicionado no Array: ${item}\nArray: ${favoriteItems}`);
           return [item, ...favoriteItems];
         });
       }

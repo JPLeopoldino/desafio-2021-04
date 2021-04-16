@@ -45,4 +45,4 @@ Segue o exemplo:
 - [x] Paginação ou scroll infinito
 - [x] Uso de contexto para gerenciamento centralizado de estados
 - [x] Splash Screen
-- [x] Fazer deploy do app no Heroku
+- [x] [Fazer deploy do app no Heroku](https://app-movie-searcher.herokuapp.com/)

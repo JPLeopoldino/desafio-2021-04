@@ -1,41 +1,48 @@
-# Desafio Alfred: Abril/2021 
+<span align="center">
+  <img src="./movieSearcher/assets/icon.png" alt="movie-searcher-app" width="100px"/>
+</span>
 
-Neste desafio você terá que implementar um sistema mobile com React Native onde será possível buscar por filmes e series utilizando a API (http://www.omdbapi.com/). A sua solução deve:
+#### Apresentando:
+<h1 align="center" style="color: #663366" >Movie Seacher</h1>
 
-- Permitir a busca por filmes
-- Listar os filmes encontrados
-- Permitir escolher filmes favoritos
-- Permitir remover um filme dos favoritos
-- Listar os filmes favoritos
-- Caso o aplicativo seja fechado, os favoritos não devem ser perdidos
+---
 
-Para ajudar na concepção do layout, estamos disponibilizando abaixo um print de um aplicativo que atende os requisitos listados. Use sua criatividade para criar um layout novo, ou reproduza o leyout proposto, se preferir.
+Neste aplicativo você pode buscar por filmes, ver a data de lançamento dos mesmos e favorita-los.
 
-Para facilitar um pouco mais as coisas, já deixamos separada uma chave de acesso para a API (ou você pode criar a sua também):
+O app apresenta um layout nas cores laranja e roxo, e possui uma navegação vertical entre os filmes, dispondo da maior parte da tela para apresentar o poster do filme.
 
 <p align="center">
-  <img src="./cinema-app.gif" alt="cinema-app" width="200px">
+  <img src="./movie-searcher-app-overview.gif" alt="movie-searcher-app" width="300px">
 </p>
 
-Chave de API: 925eba28
-Exemplo requisição: GET http://www.omdbapi.com/?apikey=925eba28&s=batman
+## Desenvolvimento
 
-Você pode criar uma aplicação nativa, ou com expo (sdk39+).
+Para desenvolver esse app eu utilizei Java Script e React Native.
+Tentei o máximo tratar os possiveis erros que possa acontecer com o app.
 
-## Diferenciais
-Os projetos em desenvolvimento na Alfred utilizam ou podem utilizar as seguintes tecnologias/conceitos:
+Um exemplo é quando você fica sem conexão com o servidor, ou oferece uma chave da api errada, porém, você ainda tem acesso aos seus filmes favoritados.
+Segue o exemplo:
 
-- Typescript
-- Styled Components
-- Componentização das interfaces
-- Paginação ou scroll infinito
-- Uso de contexto para gerenciamento centralizado de estados
-- Splash Screen
-- Fazer deploy do app no Heroku
+<p align="center">
+  <img src="./movie-searcher-app-error.gif" alt="movie-searcher-app" width="300px">
+</p>
 
-O uso destas tecnologias/conceitos não são fundamentais na solução, mas será muito apreciado o uso do que conseguir incluir. 
+---
+## Requisitos cumpridos
 
-## Entrega da sua solução - 16-04-21
-Altere o arquivo README.md descrevendo o que o aplicativo faz e que tipo de premissas foram adotadas para desenvolver as funcionalidades. Adicione pelo menos uma imagem do aplicativo, pode ser uma imagem estática ou um gif do aplicativo sendo utilizado. Para entregar o projeto, faça um fork neste repositório e envie o link do seu repositório para o responsável quando o projeto estiver finalizado.
+- [x] Permitir a busca por filmes
+- [x] Listar os filmes encontrados
+- [x] Permitir escolher filmes favoritos
+- [x] Permitir remover um filme dos favoritos
+- [x] Listar os filmes favoritos
+- [x] Caso o aplicativo seja fechado, os favoritos não devem ser perdidos
 
-Ficamos no aguardo da entrega da sua solução e desejamos boa sorte ;)
+## Requisitos opcionais (diferenciais)
+
+- [ ] Typescript
+- [x] Styled Components
+- [x] Componentização das interfaces
+- [x] Paginação ou scroll infinito
+- [x] Uso de contexto para gerenciamento centralizado de estados
+- [x] Splash Screen
+- [x] Fazer deploy do app no Heroku

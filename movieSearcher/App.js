@@ -1,9 +1,13 @@
 import React from 'react';
 import Routes from './routes';
 
-const App = ()=>{
-  return(
-    <Routes />
+import Store from './store/storeGlobalState';
+
+const App = () => {
+  return (
+    <Store>
+      <Routes />
+    </Store>
   );
 }
 

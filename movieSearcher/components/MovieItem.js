@@ -1,64 +1,35 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import Poster from './Poster';
 
-const MovieItem = ({poster, title, year, id, isFavorite, onPress})=>{
+const MovieItem = ({ poster, title, year, id, isFavorite, onPress }) => {
 
-    // const setFavData = async (key, value)=>{
-    //     try {
-    //         await AsyncStorage.setItem(key, value);
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
-
-    return(
+    return (
         <View style={styles.container}>
-            <Image
-                style={styles.image}
-                source={{uri:poster}}
-            />
-            {/* {
-            item.Poster == "N/A" ? 
-            <View style={styles.nullImage} >
+            <TouchableOpacity
+                onPress={() => onPress(title)}
+                style={styles.favoriteContainer}
+            >
                 <Icon
-                    name='help'
-                    type='material-community'
-                    color='#BBB'
-                    size={80}
+                    name={isFavorite ? 'star' : 'star-outline'}
+                    color={isFavorite ? '#F76E2A' : '#AAA'}
+                    containerStyle={styles.iconContainer}
                 />
-            </View> :
-            <Image
-                style={styles.image}
-                source={{uri:item.Poster}}
-            />
-            } */}
+            </TouchableOpacity>
+            <Poster img={poster} />
             <View style={styles.itemContainer}>
                 <View style={styles.textContainer}>
-                    <Text style={style.title}>{title}</Text>
-                    <Text style={style.description}>Ano: {year}</Text>
+                    <Text style={styles.title}>{title}</Text>
+                    <Text style={styles.description}>Data de Lançamento: {year}</Text>
                 </View>
-                <TouchableOpacity
-                    onPress={()=> onPress(id)}
-                >
-                    <Icon
-                        name={isFavorite ? 'star' : 'star-outline'}
-                        type='material-community'
-                        color='#AAA'
-                        style={styles.icon}
-                        containerStyle={{backgroundColor: '#FFF', padding: 10, borderRadius: 30, elevation: 5}}
-                    />
-                </TouchableOpacity>
-
             </View>
-
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         flexDirection: 'column',
         alignItems: 'center',
         flexGrow: 1,
@@ -66,18 +37,20 @@ const styles = StyleSheet.create({
         paddingHorizontal: 50,
         position: 'relative',
     },
-    image: {
-        width: '90%',
-        height: 500,
-        borderRadius: 13,
-        backgroundColor: '#AAA'
+    favoriteContainer: {
+        position: 'absolute',
+        zIndex: 99,
+        top: 0,
+        right: 0,
+        marginHorizontal: 50,
+        marginVertical: 20,
+        elevation: 230,
     },
-    nullImage: {
-        width: '100%',
-        height: 500,
-        borderRadius: 13,
-        backgroundColor: '#DDD',
-        justifyContent: 'center'
+    iconContainer: {
+        backgroundColor: '#FFF',
+        padding: 10,
+        borderRadius: 30,
+        elevation: 5,
     },
     itemContainer: {
         marginHorizontal: 50,
@@ -92,59 +65,20 @@ const styles = StyleSheet.create({
         padding: 15,
         alignItems: 'center',
         justifyContent: 'space-around',
-    },
-    textContainer: {
-        
-    },
-    icon:{
-    },
-});
-
-const style = StyleSheet.create({
-    starContainer: {
-        justifyContent: 'center',
+        elevation: 8,
     },
     title: {
-        color: '#14191f',
+        color: '#663366',
         fontWeight: 'bold',
-        fontSize: 23,
+        fontSize: 24,
         textAlign: 'center',
     },
     description: {
-        color: '#777',
-        fontSize: 15,
+        marginTop: 4,
+        color: '#947394',
+        fontSize: 16,
         textAlign: 'center',
     },
-    price: {
-        fontSize: 30,
-        color: '#02b025',
-        textAlign: 'center',
-        fontWeight: 'bold',
-    },
-    itemContent: {
-        width: 200,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginLeft: 40,
-    },
-    content: {
-        flexDirection: 'row',
-        padding: 25,
-        borderBottomWidth: 0.3,
-        borderColor: '#000',
-        backgroundColor: '#FFF'
-    },
-    image: {
-        height: 100,
-        width: '50%',
-        borderRadius: 10,
-    },
-    // line: {
-    //     position: 'absolute',
-    //     width: '150%',
-    //     height: 1,
-    //     backgroundColor: '#FFF',
-    // }
 });
 
 export default MovieItem;
